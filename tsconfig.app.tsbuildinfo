@@ -1,0 +1,1 @@
+{"root":["./src/app/appbootstrap.tsx","./src/app/index.tsx","./src/app/main.tsx","./src/shared/libs/supabaseclient.ts","./src/shared/stores/appstore.ts","./src/shared/stores/store.ts","./src/shared/stores/uistore.ts"],"version":"5.9.3"}
