@@ -4,7 +4,8 @@
     "baseUrl": ".",
     "paths": {
       "@shared/*": ["src/shared/*"],
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@features/*": ["src/features/*"]
     }
   },
   "files": [],
