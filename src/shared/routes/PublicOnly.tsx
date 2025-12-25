@@ -6,7 +6,9 @@ import LoadingPage from '@shared/components/layout/LoadingPage';
 export const PublicOnly = observer(function PublicOnly() {
   const { authStore, appStore } = useStore();
 
-  if (!appStore.ready) return <LoadingPage />;
+  if (!appStore.ready) {
+    return <div style={{ padding: 40 }}>Loading app…</div>;
+  }
   if (authStore.uid) return <Navigate to="/" replace />;
 
   return <Outlet />;
