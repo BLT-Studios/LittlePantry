@@ -4,10 +4,9 @@ import type { ReactNode } from "react";
 type CardProps = {
   children: ReactNode;
   className?: string;
-  variant?: "default" | "glowing";
 };
 
-export function Card({ children, className, variant }: CardProps) {
+export function Card({ children, className }: CardProps) {
   return (
     <div
       className={[
