@@ -4,6 +4,7 @@ import { StoreContext, store } from '@shared/stores/store';
 import AppBootstrap from './AppBootstrap';
 import AppRoutes from './routes';
 
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <StoreContext.Provider value={store}>
     <AppBootstrap>
