@@ -14,6 +14,14 @@ const routes = createBrowserRouter([
           Component: (await import('@features/auth/pages/loginPage')).default,
         }),
       },
+      {
+        path: '/buttons',
+        lazy: async () => ({
+          Component: (
+            await import('@features/auth/pages/ButtonGroupDefaultExample')
+          ).default,
+        }),
+      },
     ],
   },
 

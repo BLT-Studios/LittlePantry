@@ -20,29 +20,35 @@ const ButtonGroupDefaultExample = () => {
 
         <section className="space-y-3">
           <h2 className="text-sm font-medium">Variants</h2>
-          <div className="flex flex-wrap gap-3">
-            <Button variant="primary">Primary</Button>
-            <Button variant="secondary">Secondary</Button>
-            <Button variant="tertiary">Tertiary</Button>
-            <Button variant="destructive">Destructive</Button>
+          <div className="inline-flex overflow-hidden rounded-xl border border-[--color-border-subtle]">
+            <Button variant="primary" className="rounded-lg">Primary</Button>
+            <Button variant="secondary" className="rounded-none">Secondary</Button>
+            <Button variant="tertiary" className="rounded-none">Tertiary</Button>
+            <Button variant="destructive" className="rounded-none">Destructive</Button>
           </div>
         </section>
 
         <section className="space-y-3">
           <h2 className="text-sm font-medium">With icons</h2>
-          <div className="flex flex-wrap gap-3">
-            <Button variant="primary" startIcon={<PlusIcon className="h-4 w-4" />}>
+          <div className="inline-flex overflow-hidden rounded-xl border border-[--color-border-subtle]">
+            <Button
+              variant="primary"
+              startIcon={<PlusIcon className="h-4 w-4" />}
+              className="rounded-none"
+            >
               Add item
             </Button>
             <Button
               variant="secondary"
               endIcon={<ArrowRightIcon className="h-4 w-4" />}
+              className="rounded-none"
             >
               Continue
             </Button>
             <Button
               variant="destructive"
               startIcon={<TrashIcon className="h-4 w-4" />}
+              className="rounded-none"
             >
               Delete
             </Button>
@@ -51,11 +57,11 @@ const ButtonGroupDefaultExample = () => {
 
         <section className="space-y-3">
           <h2 className="text-sm font-medium">Icon only</h2>
-          <div className="flex flex-wrap gap-3 items-center">
-            <Button variant="iconOnly">
+          <div className="inline-flex overflow-hidden rounded-xl border border-[--color-border-subtle]">
+            <Button variant="iconOnly" className="rounded-none">
               <PlusIcon className="h-4 w-4" />
             </Button>
-            <Button variant="iconOnly">
+            <Button variant="iconOnly" className="rounded-none">
               <TrashIcon className="h-4 w-4" />
             </Button>
           </div>
@@ -63,11 +69,11 @@ const ButtonGroupDefaultExample = () => {
 
         <section className="space-y-3">
           <h2 className="text-sm font-medium">Full width</h2>
-          <div className="space-y-2">
-            <Button variant="primary" fullWidth>
+          <div className="overflow-hidden rounded-xl border border-[--color-border-subtle] divide-y divide-[--color-border-subtle]">
+            <Button variant="primary" fullWidth className="rounded-none">
               Primary full width
             </Button>
-            <Button variant="secondary" fullWidth>
+            <Button variant="secondary" fullWidth className="rounded-none">
               Secondary full width
             </Button>
           </div>
