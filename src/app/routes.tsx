@@ -4,9 +4,13 @@ import {
   Navigate,
 } from 'react-router-dom';
 import { Suspense } from 'react';
+import { PublicOnly } from '@shared/routes/PublicOnly';
+import { RequireAuth } from '@shared/routes/RequireAuth';
+import { RootLayout } from '@shared/components/layout/RootLayout';
 
 const routes = createBrowserRouter([
   {
+    element: <PublicOnly />,
     children: [
       {
         path: '/login',
@@ -21,6 +25,20 @@ const routes = createBrowserRouter([
             await import('@features/auth/pages/ButtonGroupDefaultExample')
           ).default,
         }),
+      },
+    ],
+  },
+  {
+    element: <RequireAuth />,
+    children: [
+      {
+        path: '/',
+        element: <RootLayout />,
+        children: [
+          {
+            // more pages here that require authentication(dashboard etc)
+          },
+        ],
       },
     ],
   },
