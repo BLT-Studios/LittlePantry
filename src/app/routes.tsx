@@ -26,6 +26,12 @@ const routes = createBrowserRouter([
           ).default,
         }),
       },
+      {
+        path: '/signup',
+        lazy: async () => ({
+          Component: (await import('@features/auth/pages/signupPage')).default,
+        }),
+      },
     ],
   },
   {

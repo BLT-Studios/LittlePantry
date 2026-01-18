@@ -12,7 +12,7 @@ const ButtonGroupDefaultExample = () => {
       <div className="mx-auto max-w-3xl space-y-8 rounded-[--radius-lg] bg-slate-900/60 p-6 shadow-lg border border-[--color-border-subtle]">
         <header className="space-y-1">
           <h1 className="text-lg font-semibold">Button component sheet</h1>
-          <p className="text-[--color-text-muted] text-[--text-xs]">
+          <p className="text-[--color-text-muted]">
             Quick reference for all Button variants, icon treatments, and
             layouts.
           </p>
@@ -21,10 +21,10 @@ const ButtonGroupDefaultExample = () => {
         <section className="space-y-3">
           <h2 className="text-sm font-medium">Variants</h2>
           <div className="inline-flex overflow-hidden rounded-xl border border-[--color-border-subtle]">
-            <Button variant="primary" className="rounded-lg">Primary</Button>
-            <Button variant="secondary" className="rounded-none">Secondary</Button>
-            <Button variant="tertiary" className="rounded-none">Tertiary</Button>
-            <Button variant="destructive" className="rounded-none">Destructive</Button>
+            <Button variant="primary">Primary</Button>
+            <Button variant="secondary">Secondary</Button>
+            <Button variant="tertiary" >Tertiary</Button>
+            <Button variant="destructive">Destructive</Button>
           </div>
         </section>
 
@@ -34,21 +34,20 @@ const ButtonGroupDefaultExample = () => {
             <Button
               variant="primary"
               startIcon={<PlusIcon className="h-4 w-4" />}
-              className="rounded-none"
+
             >
               Add item
             </Button>
             <Button
               variant="secondary"
               endIcon={<ArrowRightIcon className="h-4 w-4" />}
-              className="rounded-none"
             >
               Continue
             </Button>
             <Button
               variant="destructive"
               startIcon={<TrashIcon className="h-4 w-4" />}
-              className="rounded-none"
+
             >
               Delete
             </Button>
@@ -58,10 +57,10 @@ const ButtonGroupDefaultExample = () => {
         <section className="space-y-3">
           <h2 className="text-sm font-medium">Icon only</h2>
           <div className="inline-flex overflow-hidden rounded-xl border border-[--color-border-subtle]">
-            <Button variant="iconOnly" className="rounded-none">
+            <Button variant="iconOnly">
               <PlusIcon className="h-4 w-4" />
             </Button>
-            <Button variant="iconOnly" className="rounded-none">
+            <Button variant="iconOnly" >
               <TrashIcon className="h-4 w-4" />
             </Button>
           </div>
@@ -70,10 +69,10 @@ const ButtonGroupDefaultExample = () => {
         <section className="space-y-3">
           <h2 className="text-sm font-medium">Full width</h2>
           <div className="overflow-hidden rounded-xl border border-[--color-border-subtle] divide-y divide-[--color-border-subtle]">
-            <Button variant="primary" fullWidth className="rounded-none">
+            <Button variant="primary" fullWidth>
               Primary full width
             </Button>
-            <Button variant="secondary" fullWidth className="rounded-none">
+            <Button variant="secondary" fullWidth>
               Secondary full width
             </Button>
           </div>

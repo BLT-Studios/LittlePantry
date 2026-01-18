@@ -1,7 +1,7 @@
 import CardForm from '@shared/components/CardForm';
 
 const LoginPage = () => {
-  return <CardForm />;
+  return <CardForm mode="login" />;
 };
 
 export default LoginPage;
