@@ -22,21 +22,26 @@ export function Button({
   children,
 }: ButtonProps) {
   const base =
-    'inline-flex items-center justify-center px-4 py-2 rounded-full font-medium transition';
+        'inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium rounded-full transition active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2';
 
   const variants: Record<
     NonNullable<ButtonProps['variant']>,
     string
   > = {
     primary:
-      'bg-[--btn-primary-bg] text-[--btn-primary-text] hover:bg-[--btn-primary-hover-bg]',
+      'w-full h-12 rounded-3xl bg-teal-800 text-white font-medium hover:bg-black transition',
+
     secondary:
-      'bg-slate-100 text-slate-900 hover:bg-slate-200 border border-slate-200',
+      'bg-slate-700 text-white hover:bg-slate-800 focus-visible:ring-slate-600',
+
+    tertiary:
+      'bg-white text-slate-600 hover:bg-slate-100 focus-visible:ring-slate-400',
+
     destructive:
-      'bg-[--color-destructive] text-white hover:bg-[--color-destructive-600]',
-    tertiary: 'text-slate-200 hover:bg-fuchsia-500',
+      'bg-red-500 text-white hover:bg-red-600 focus-visible:ring-red-500',
+
     iconOnly:
-      'p-2 bg-[--color-primary] text-white rounded-full inline-flex items-center justify-center',
+      'p-3 bg-indigo-500 text-white hover:bg-indigo-600 rounded-full focus-visible:ring-indigo-500',
   };
 
   return (

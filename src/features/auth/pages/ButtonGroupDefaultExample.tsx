@@ -12,7 +12,7 @@ const ButtonGroupDefaultExample = () => {
       <div className="mx-auto max-w-3xl space-y-8 rounded-[--radius-lg] bg-slate-900/60 p-6 shadow-lg border border-[--color-border-subtle]">
         <header className="space-y-1">
           <h1 className="text-lg font-semibold">Button component sheet</h1>
-          <p className="text-[--color-text-muted] text-[--text-xs]">
+          <p className="text-[--color-text-muted]">
             Quick reference for all Button variants, icon treatments, and
             layouts.
           </p>
@@ -20,18 +20,22 @@ const ButtonGroupDefaultExample = () => {
 
         <section className="space-y-3">
           <h2 className="text-sm font-medium">Variants</h2>
-          <div className="flex flex-wrap gap-3">
+          <div className="inline-flex overflow-hidden rounded-xl border border-[--color-border-subtle]">
             <Button variant="primary">Primary</Button>
             <Button variant="secondary">Secondary</Button>
-            <Button variant="tertiary">Tertiary</Button>
+            <Button variant="tertiary" >Tertiary</Button>
             <Button variant="destructive">Destructive</Button>
           </div>
         </section>
 
         <section className="space-y-3">
           <h2 className="text-sm font-medium">With icons</h2>
-          <div className="flex flex-wrap gap-3">
-            <Button variant="primary" startIcon={<PlusIcon className="h-4 w-4" />}>
+          <div className="inline-flex overflow-hidden rounded-xl border border-[--color-border-subtle]">
+            <Button
+              variant="primary"
+              startIcon={<PlusIcon className="h-4 w-4" />}
+
+            >
               Add item
             </Button>
             <Button
@@ -43,6 +47,7 @@ const ButtonGroupDefaultExample = () => {
             <Button
               variant="destructive"
               startIcon={<TrashIcon className="h-4 w-4" />}
+
             >
               Delete
             </Button>
@@ -51,11 +56,11 @@ const ButtonGroupDefaultExample = () => {
 
         <section className="space-y-3">
           <h2 className="text-sm font-medium">Icon only</h2>
-          <div className="flex flex-wrap gap-3 items-center">
+          <div className="inline-flex overflow-hidden rounded-xl border border-[--color-border-subtle]">
             <Button variant="iconOnly">
               <PlusIcon className="h-4 w-4" />
             </Button>
-            <Button variant="iconOnly">
+            <Button variant="iconOnly" >
               <TrashIcon className="h-4 w-4" />
             </Button>
           </div>
@@ -63,7 +68,7 @@ const ButtonGroupDefaultExample = () => {
 
         <section className="space-y-3">
           <h2 className="text-sm font-medium">Full width</h2>
-          <div className="space-y-2">
+          <div className="overflow-hidden rounded-xl border border-[--color-border-subtle] divide-y divide-[--color-border-subtle]">
             <Button variant="primary" fullWidth>
               Primary full width
             </Button>
